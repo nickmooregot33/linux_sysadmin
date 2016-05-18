@@ -184,15 +184,15 @@ Scripting
 	- ++ works as an assignment for the variables inside the expression
 	- work in the context of double quotes
 - functions
+	- arguments to functions are treated like arguments to the script
+		- $0 is still the command name for the script
+	- one person says use functions instead of aliases.  Who knows if he is correct
 ```
 function function_name{
 	code
 	exit values
 }
 ```
-	- arguments to functions are treated like arguments to the script
-		- $0 is still the command name for the script
-	- one person says use functions instead of aliases.  Who knows if he is correct
 - if statement
 ```
 if command;then
@@ -210,10 +210,10 @@ done
 - switch \(case statement\)
 ```
 case $var in
-	*condition1*) 	command;;  
-	*condition2*) 	command;;
+	condition1) 	command;;  
+	condition2) 	command;;
 	etc
-	\*)		command 		#default command
+	*)		command 		#default command
 						#last case has no ;;
 esac
 ```
