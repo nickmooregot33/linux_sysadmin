@@ -26,13 +26,28 @@ Commands to learn \(read their man pages\)
 - grep 
 	- searches its input text and prints the lines that match the given pattern
 	- `-c`
-		- print a count of the matched lines
+		- print a count of the matched lines instead of the lines themselves
+		- --count
 	- `-v`
 		- print nonmatching lines
+		- --invert-match
 	- `-l`
-		- print only the names of matching files instead of all the lines
+		- print only the names of files containing lines that match instead of all the matching lines
+		- --files-with-matches
 	- `-p`
 		- uses perl-styled regular expressions but just use perl instead
+	-  `-i`
+		- ignore case
+		- --ignore-case
+	-  `-L`
+		- only print the files that don't have any lines that match
+		- --files-without-match
+	-  `-n`
+		- print the matching line number along with the matching line
+		- --line-number
+	- `-h`
+		- for multifile searches, suppress the file name, only printing the line
+		- --no-filename
 - uniq
 	- kind of like `sort -u` but with a few other options
 	- input must be presorted
